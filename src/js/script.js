@@ -26,7 +26,7 @@ console.log(herois)
 // =======================================================================
 
 // DOM - Document Object Model (Manipula) - Usa o ID para manipular
-document.getElementById("titulo").innerText="Dev" // document (DOM) e getElementById é o id // sem o innerText ou vazio, ele pega apenas o que está no h1
+document.getElementById("titulo").innerText="Dev" // document (DOM) e getElementById recebe o id // sem o innerText ou vazio, ele pega apenas o que está no h1
 
 // Função mudar
 function mudar(){
@@ -34,4 +34,11 @@ function mudar(){
     let titulo = document.getElementById("titulo");
     // inner - Passa texto e elemento - Altera o título
     titulo.innerHTML = novo.value;
+}
+
+function inserir(){
+    let numero = document.getElementById("posicao").value -1; // "valor -1" coloca na posiçao "1", pois conta como "0" o primeiro colocado
+    let novoTime = document.getElementById("novo").value;
+    // getElementsByClassName recebe as classes
+    document.getElementsByClassName("time")[numero].innerHTML = novoTime;
 }
