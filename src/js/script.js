@@ -1,0 +1,37 @@
+// Arrow function (Função reduzida)
+const multiplicarValor=(num1, num2)=>{
+    return num1 * num2;
+}
+
+console.log(multiplicarValor(3,5))
+
+// =======================================================================
+
+// Arrays (Lista de dados)
+let herois = ["Arqueiro", "Thor", "Viúva"];
+console.log(herois[0]) // [0] Mostra apenas um (nessa lista vai do 0 ao 3)
+
+// =======================================================================
+
+// Push - Método adicionar um item no final
+herois.push("Capitão") 
+console.log(herois)
+
+// =======================================================================
+
+// Pop - Remove o último item adicionado
+herois.pop("Capitão")
+console.log(herois)
+
+// =======================================================================
+
+// DOM - Document Object Model (Manipula) - Usa o ID para manipular
+document.getElementById("titulo").innerText="Dev" // document (DOM) e getElementById é o id // sem o innerText ou vazio, ele pega apenas o que está no h1
+
+// Função mudar
+function mudar(){
+    let novo = document.getElementById("nome");
+    let titulo = document.getElementById("titulo");
+    // inner - Passa texto e elemento - Altera o título
+    titulo.innerHTML = novo.value;
+}
