@@ -42,3 +42,32 @@ function inserir(){
     // getElementsByClassName recebe as classes
     document.getElementsByClassName("time")[numero].innerHTML = novoTime;
 }
+
+// querySelector - escolhe qual quer selecionar (apenas um) / ex: pega uma class específica
+let botao = document.querySelector("#btnImagem");
+let container = document.querySelector("#containerImagem");
+
+// Adicionar o evento de click
+// addEventListener - Faz qualquer ação
+botao.addEventListener("click",function(){
+
+    if(document.getElementById("minhaImagem")){
+        alert("Imagem já foi criada")
+        return
+    }
+
+    // createElement - Cria um novo elemento imagem
+    let novaImg = document.createElement("img");
+
+    novaImg.id = "minhaImagem"
+    novaImg.src = "/src/assets/imagem.jpg";
+    novaImg.alt = "Imagem de um cachorro em pé segurando um buque bem fofo";
+
+    // Estilização
+    novaImg.style.width="400px";
+    novaImg.style.borderRadius="10px";
+    novaImg.style.marginTop="15px";
+    novaImg.style.display="block";
+
+    container.appendChild(novaImg)
+})
